@@ -6,7 +6,6 @@ final class HttpRequest implements Runnable {
     final static String CRLF = "\r\n";
     Socket socket;
     
-    
     //Example change 
     // Constructor
     public HttpRequest(Socket socket) throws Exception {
