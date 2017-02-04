@@ -1,9 +1,44 @@
 import java.net.*;
 import java.io.*;
+import java.awt.*;
+import java.awt.event.*;
+import javax.swing.*;
 
-public class KnockKnockServer {
+public class ShapeRequestServer extends JFrame{
+	
+	private JPanel contentPane;
+	private JTextField ip_address;
+	private JTextField port_number;
+	private JTextField n;
+	private JTextField post_string;
+	
+	private JTextArea result;
+	private ObjectOutputStream output;
+	private ObjectInputStream input;
+	private ServerSocket server;
+	private Socket connection;
+	
+	//constructor
+	public void Server(){
+	
+		ip_address = new JTextField();
+		ip_address.setEditable(false);
+		ip_address.addActionListener(
+				
+				new ActionListener(){
+					
+					public void actionPerformed(ActionEvent event){
+					
+				}
+				
+				}		
+			
+				);
+		
+	}
+	
     public static void main(String[] args) throws IOException {
-
+    	
         ServerSocket serverSocket = null;
         try {
             serverSocket = new ServerSocket(4444);

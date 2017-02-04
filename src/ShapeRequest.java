@@ -2,13 +2,12 @@ import java.io.* ;
 import java.net.* ;
 import java.util.* ;
 
-final class HttpRequest implements Runnable {
+final class ShapeRequest implements Runnable {
     final static String CRLF = "\r\n";
     Socket socket;
     
-    //Example change 
     // Constructor
-    public HttpRequest(Socket socket) throws Exception {
+    public ShapeRequest(Socket socket) throws Exception {
 	this.socket = socket;
     }
     
@@ -17,6 +16,7 @@ final class HttpRequest implements Runnable {
 	try {
 	    processRequest();
 	} catch (Exception e) {
+		System.out.println("Error, process cannot be requested.");
 	    System.out.println(e);
 	}
     }

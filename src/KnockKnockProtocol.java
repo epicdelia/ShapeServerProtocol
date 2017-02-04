@@ -19,6 +19,10 @@ public class KnockKnockProtocol {
                                  "Is there an owl in here?",
                                  "Is there an echo in here?" };
 
+    private String[] triangles = {"isoceles", "right", "n"};
+    private String[] quads = { "rectangular", "square", "rhombus" , "parallelogram", "convex", "n" };
+
+
     public String processInput(String theInput) {
         String theOutput = null;
 

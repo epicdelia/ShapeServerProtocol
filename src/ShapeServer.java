@@ -16,7 +16,7 @@ public final class ShapeServer {
 	    Socket connection = socket.accept();
 	    
 	    // Construct an object to process the HTTP request message.
-	    HttpRequest request = new HttpRequest(connection);
+	    ShapeRequest request = new ShapeRequest(connection);
 	    
 	    // Create a new thread to process the request.
 	    Thread thread = new Thread(request);
